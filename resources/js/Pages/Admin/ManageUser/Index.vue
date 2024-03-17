@@ -6,7 +6,7 @@ import BaseLevel from '@/Components/BaseLevel.vue';
 import BaseButtons from '@/Components/BaseButtons.vue';
 import SuccessButton from '@/Components/SuccessButton.vue';
 import DangerButton from '@/Components/DangerButton.vue';
-import SecondaryButtonLink from '@/Components/SecondaryButtonLink.vue';
+import PrimaryButtonLink from '@/Components/PrimaryButtonLink.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import SuccessButtonLink from '@/Components/SuccessButtonLink.vue';
 import TextInput from '@/Components/TextInput.vue';
@@ -167,9 +167,9 @@ onMounted(() => {
                                 </td>
                                 <td v-if="can.edit || can.delete" class="py-4 px-6">
                                     <div class="flex justify-start space-x-4" no-wrap>
-                                        <SecondaryButtonLink v-if="can.edit" :href="route('user.edit', user.id)">
+                                        <PrimaryButtonLink v-if="can.edit" :href="route('user.edit', user.id)">
                                             Edit
-                                        </SecondaryButtonLink>
+                                        </PrimaryButtonLink>
                                         <DangerButton v-if="can.delete" @click="confirmUserDeletion(user.id)">
                                             Delete
                                         </DangerButton>
