@@ -144,7 +144,7 @@ const logout = () => {
 
                                         <span v-else class="inline-flex rounded-md">
                                             <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
-                                                {{ $page.props.auth.user.name }}
+                                                {{ $page.props.auth.user.first_name }} {{ $page.props.auth.user.last_name }}
 
                                                 <ChevronDownIcon class="ms-2 h-4 w-4"/>
                                             </button>

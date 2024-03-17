@@ -21,9 +21,9 @@ class AssignRole extends Seeder
         $role = Role::where('name', 'Admin')->get();
 
         $user = User::factory()->create([
-            'first_name' => 'Bryan',
-            'last_name' => 'Arocha',
-            'email' => 'mhinescaliwag@gmail.com',
+            'first_name' => 'Admin',
+            'last_name' => 'User',
+            'email' => 'admin.user@example.com',
         ]);
         $user->assignRole($role);
 

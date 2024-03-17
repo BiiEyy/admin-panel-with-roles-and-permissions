@@ -28,26 +28,24 @@ const props = defineProps({
 let search = ref(props.search);
 
 const clear = () => {
-    router.get(
-    route('users.index'),
-    { search: '' },
+    router.get(route('user.index'), { 
+        search: '' 
+    },
     {
-      preserveState: true,
-      replace: true,
-    }
-  );
-  search.value = ''
+        preserveState: true,
+        replace: true,
+    });
+    search.value = ''
 }
 
 watch(search, (value) => {
-    router.get(
-    route('users.index'),
-    { search: value },
+    router.get(route('user.index'), { 
+        search: value 
+    },
     {
-      preserveState: true,
-      replace: true,
-    }
-  );
+        preserveState: true,
+        replace: true,
+    });
 }); 
 
 const confirmingUserDeletion = ref(false);
@@ -117,9 +115,16 @@ onMounted(() => {
                         <div class="flex space-x-2 items-center text-gray-700 dark:text-white">
                             Users Settings Page! Here you can list, create, update or delete user!
                         </div>
-                        <SuccessButtonLink v-if="can.create" :href="route('user.create')">
-                            Create User
-                        </SuccessButtonLink>
+                        <div class="flex space-x-4 items-center w-1/3" v-if="can.create">
+                            <button class="flex justify-center items-center">
+                                <XCircleIcon class="h-5 w-6 dark:fill-white" @click="clear()" />
+                            </button>
+                            <TextInput placeholder="Search" id="text" v-model="search" type="text" class="mt-1 block w-2/3" />
+
+                            <SuccessButtonLink v-if="can.create" :href="route('user.create')">
+                                Create User
+                            </SuccessButtonLink>
+                        </div>
                     </div>
                 </div>
             </div>
