@@ -28,14 +28,10 @@ const props = defineProps({
 let search = ref(props.search);
 
 const clear = () => {
-    router.get(route('user.index'), { 
-        search: '' 
-    },
+    router.get(route('user.index'), { },
     {
-        preserveState: true,
         replace: true,
     });
-    search.value = ''
 }
 
 watch(search, (value) => {

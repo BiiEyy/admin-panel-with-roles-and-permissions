@@ -14,6 +14,7 @@ class Role extends OriginalRole
 
     protected $fillable = [
         'name',
+        'description',
         'guard_name',
         'updated_at',
         'created_at',
@@ -23,4 +24,10 @@ class Role extends OriginalRole
     {
         return $this->belongsToMany(Permission::class, 'role_has_permissions', 'role_id', 'permission_id');
     }
+
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s',
+        'updated_at' => 'datetime:Y-m-d H:i:s',
+    ];
+
 }

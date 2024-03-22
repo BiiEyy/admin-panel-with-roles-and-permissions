@@ -72,6 +72,9 @@ const logout = () => {
                                         <DropdownLink :href="route('user.index')">
                                             Manage User
                                         </DropdownLink>
+                                        <DropdownLink :href="route('role.index')">
+                                            Manage Role
+                                        </DropdownLink>
                                     </template>
                                 </Dropdown>
                             </div>

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ThemeSwitchController;
 use App\Http\Controllers\Admin\ManageUserController;
+use App\Http\Controllers\Admin\ManageRoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     # Admin Tools 
     Route::prefix('admin')->group(function () {
         Route::resource('user', ManageUserController::class);
+        Route::resource('role', ManageRoleController::class);
     });
 });

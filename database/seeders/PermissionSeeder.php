@@ -39,6 +39,22 @@ class PermissionSeeder extends Seeder
             [
                 'name' => 'Manage User - Delete',
                 'description' => 'Admin Tools - Manage User - Delete'
+            ],
+            [
+                'name' => 'Manage Role - Read',
+                'description' => 'Admin Tools - Manage Role - Read'
+            ],
+            [
+                'name' => 'Manage Role - Create',
+                'description' => 'Admin Tools - Manage Role - Create'
+            ],
+            [
+                'name' => 'Manage Role - Edit',
+                'description' => 'Admin Tools - Manage Role - Edit'
+            ],
+            [
+                'name' => 'Manage Role - Delete',
+                'description' => 'Admin Tools - Manage Role - Delete'
             ]
         ];
 

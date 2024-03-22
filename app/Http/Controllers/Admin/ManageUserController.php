@@ -14,6 +14,7 @@ use App\Actions\Fortify\PasswordValidationRules;
 class ManageUserController extends Controller
 {
     use PasswordValidationRules;
+    
     public function __construct()
     {
         $this->middleware('can:Manage User - Read', ['only' => ['index', 'show']]);
